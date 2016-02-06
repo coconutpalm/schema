@@ -1,4 +1,4 @@
-(defproject prismatic/schema "1.0.5-SNAPSHOT"
+(defproject prismatic/schema "1.0.5"
   :description "Clojure(Script) library for declarative data description and validation"
   :url "http://github.com/plumatic/schema"
   :license {:name "Eclipse Public License"
@@ -25,7 +25,7 @@
                                    {:source-paths ["test/cljx"]
                                     :output-path "target/generated/test/cljs"
                                     :rules :cljs}]}}
-             :1.8 {:dependencies [[org.clojure/clojure "1.8.0-RC1"] [org.clojure/clojurescript "0.0-3308"]]}}
+             :1.8 {:dependencies [[org.clojure/clojure "1.8.0"] [org.clojure/clojurescript "0.0-3308"]]}}
 
   :aliases {"all" ["with-profile" "dev:dev,1.8"]
             "deploy" ["do" "clean," "cljx" "once," "deploy" "clojars"]
