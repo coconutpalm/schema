@@ -301,6 +301,13 @@
     (invalid! s {:x 3.14})
     (invalid! s [1 2 3])))
 
+(deftest types-test
+  (let [s (s/types s/Number s/String)]
+    (valid! s 5)
+    (valid! s 3.14)
+    (valid! s (/ 5/3))
+    (valid! s "Hello, world")))
+
 (deftest constrained-test
   (let [s (s/constrained s/Int odd?)]
     (is (= '(constrained Int odd?) (s/explain s)))
@@ -1386,3 +1393,6 @@
 
 (deftest schema-ns-test
   (is (= 'schema.core-test (s/schema-ns TestFoo))))
+
+
+(run-tests)
