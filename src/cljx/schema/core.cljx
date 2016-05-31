@@ -555,8 +555,8 @@
   [& schemas]
   (CondPre. schemas))
 
-;; Match the listed surface types only
 
+;; Match the listed surface types only
 (clojure.core/defn types
   "Returns a schema that matches the listed surface types only (e.g.: primitive or collection types but not contents).
   e.g.: (s/types s/Str s/InputStream) generates a schema matching either a String or an InputStream."
